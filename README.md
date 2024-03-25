@@ -13,7 +13,12 @@ Pour utiliser le Pop-shock il est nécessaire d'avoir le matériel suivant:
 
 -1 accelerometre MPU6050	
 
--des fils	
+-Des fils	
+
+-Des resistances de 10 000 Ohm
+
+Il faut brancher les capteurs piezoelectriques sur les pins analogiques du microcontroleur. Nous avons choisi les pins A1,A2,A3,A4.
+Il faut brancher l'accelerometre sur les pins SLA et SDA
 
 
 
