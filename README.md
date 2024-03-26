@@ -1,30 +1,29 @@
-# Pop-shock
-Pop-shock is a connected rugby helmet for concussion prevention. It's an engineering master's project at IFT's ESILV school.
+#Pop-Shock
+Pop-shock is a connected rugby helmet designed for the prevention and management of concussions in sport. It embeds discreet electronics to obtain as much data as possible and promote the safety of players both professional and amateur players. Its design and comfort are indistinguishable from conventional rugby helmets. Pop-Shock uses an accelerometer and several pressure sensors distributed throughout the helmet. An alarm signal is sent directly via an application to the coach or medical staff as soon as a player receives a shock considered too violent. It's then easy to inform the referee so that the player in question can be taken out and undergo a concussion protocol. Although Pop-Shock may not perform as well as a custom-made mouthguard, its affordability and compatibility with all head sizes make it accessible to all rugby players, contributing to safety on the field.
 
-Pour utiliser le Pop-shock il est nécessaire d'avoir le matériel suivant:
 
--un casque de rugby
 
--une esp32C3 Beetle ou equivalent
+# Tutorial
 
--une batterie pour l'esp32C3 Beetle	
+## Required Materials
 
--4 capteurs piezoélectriques	
+To use Pop-shock, you will need the following materials:
 
--1 accelerometre MPU6050	
+- A rugby helmet
+- An ESP32C3 Beetle board or equivalent
+- A battery for the ESP32C3 Beetle
+- 4 piezoelectric sensors
+- 1 MPU6050 accelerometer
+- Wires
+- 10,000 Ohm resistors
 
--Des fils	
+## Installation
 
--Des resistances de 10 000 Ohm
+1. To connect the piezoelectric sensors, you'll need to plug them into the analog pins of the microcontroller, specifically utilizing pins A1, A2, A3, and A4. We've employed a voltage divider setup to ensure more practical readings. The black wire of the piezo should be connected to the ground (GND). As for the red wire, it should be split into two parts: one part goes to an analog pin, while the other part connects to a 10K Ohm resistor, ultimately linked to the ground (GND). This configuration establishes a pull-down resistor mechanism, aiding in obtaining lower values for accurate measurements.
+2. Connect the accelerometer to the SLA and SDA pins (7 and 8).
+3. Download and implement the .ino code on the ESP32C3 Beetle using the Arduino IDE. Make sure to choose the correct port and board: ESPC3 Dev Module.
+4. Once the code is compiled, the microcontroller will create a WiFi network named ESP32_Server. Connect your computer to this network and run the provided Python code (server_plot).
 
-Il faut brancher les capteurs piezoelectriques sur les pins analogiques du microcontroleur. Nous avons choisi les pins A1,A2,A3,A4.
-Nous avons utilisé un pont diviseur de tension afin d'obtenir des valeurs plus exploitables.
-On relie le fil noir du piezo au GND. On divise le fil rouge en deux: une partie qui part vers un pin analogique et une autre avec une resistance de 10K Ohm relié au GND. Cela crée une reesistance pull down pour avoir des valeurs plus faibles.
+## Usage
 
-Il faut brancher l'accelerometre sur les pins SDA et SCL (pins 8 et 9).
-
-Une fois les branchements faits et les capteurs positionnés dans le casque, il faut implementer le code .ino sur l'esp32C3 Beetle grâce à Arduino IDE. Attention à bien choisir le bon port et la bonne board : ESPC3 Dev Module.
-
-Une fois le code compilé, le microcontroleur va creer un reseau wifi nommé ESP32_Server. Il faut alors se connecter à ce reseau avec un ordinateur puis lancer le code python fourni (serveur_plot).
-
-Une fois ces étapes faites, vous devriez avoir un casque de rugby qui détecte les chocs et envoie les données des chocs sur l'ordinateur connecté au reseau wifi de l'esp32C3 Beetle et qui affiche des graphiques pour l'accélérometre et les capteurs piezoelectriques.
+Once these steps are completed, your rugby helmet will be ready to detect impacts and send data to the computer connected to the ESP32C3 Beetle's WiFi network. You can then visualize graphs for the accelerometer and piezoelectric sensors.
