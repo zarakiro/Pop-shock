@@ -20,7 +20,7 @@ To use Pop-shock, you will need the following materials:
 ## Installation
 
 1. To connect the piezoelectric sensors, you'll need to plug them into the analog pins of the microcontroller, specifically utilizing pins A1, A2, A3, and A4. We've employed a voltage divider setup to ensure more practical readings. The black wire of the piezo should be connected to the ground (GND). As for the red wire, it should be split into two parts: one part goes to an analog pin, while the other part connects to a 10K Ohm resistor, ultimately linked to the ground (GND). This configuration establishes a pull-down resistor mechanism, aiding in obtaining lower values for accurate measurements.
-2. Connect the accelerometer to the SLA and SDA pins (7 and 8).
+2. Connect the accelerometer to the SDA and SCL pins (8 and 9).
 3. Download and implement the .ino code on the ESP32C3 Beetle using the Arduino IDE. Make sure to choose the correct port and board: ESPC3 Dev Module.
 4. Once the code is compiled, the microcontroller will create a WiFi network named ESP32_Server. Connect your computer to this network and run the provided Python code (server_plot).
 
