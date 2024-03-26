@@ -53,10 +53,12 @@ def update_plots(data):
     ax_acc.set_xlabel('Temps')
     ax_acc.set_ylabel('Valeur')
     
+    piezo_names = ['Gauche', 'Droite', 'Devant', 'Dessus']  # Names for piezo sensors
+
     for i, ax_piezo in enumerate(axs_piezo):
         ax_piezo.clear()
         ax_piezo.plot(x_values_piezo[i], y_values_piezo[i])
-        ax_piezo.set_title(f'Capteur piezo {i+1}')
+        ax_piezo.set_title(f'Capteur piezo {piezo_names[i]}')
         ax_piezo.set_xlabel('Temps')
         ax_piezo.set_ylabel('Valeur')
     
