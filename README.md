@@ -18,6 +18,8 @@ Pour utiliser le Pop-shock il est nécessaire d'avoir le matériel suivant:
 -Des resistances de 10 000 Ohm
 
 Il faut brancher les capteurs piezoelectriques sur les pins analogiques du microcontroleur. Nous avons choisi les pins A1,A2,A3,A4.
+Il faut faire un pont diviseur de tensions.
+On relie le fil noir du piezo au GND. On divise le fil rouge en deux: une partie qui part vers un pin analogique et une autre avec une resistance de 10K Ohm relié au GND. Cela crée une reesistance pull down pour avoir des valeurs plus faibles.
 
 Il faut brancher l'accelerometre sur les pins SDA et SCL (pins 8 et 9).
 
