@@ -60,7 +60,7 @@ def update_plots(data):
         ax_piezo.set_xlabel('Temps')
         ax_piezo.set_ylabel('Valeur')
     
-    plt.pause(0.01)  # Petit délai pour rafraîchir le graphique
+    plt.pause(0.1)  # Petit délai pour rafraîchir le graphique
 
 # Boucle pour recevoir les données et mettre à jour les graphiques
 try:
