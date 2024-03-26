@@ -1,4 +1,4 @@
-#Pop-Shock
+# Pop-Shock
 Pop-shock is a connected rugby helmet designed for the prevention and management of concussions in sport. It embeds discreet electronics to obtain as much data as possible and promote the safety of players both professional and amateur players. Its design and comfort are indistinguishable from conventional rugby helmets. Pop-Shock uses an accelerometer and several pressure sensors distributed throughout the helmet. An alarm signal is sent directly via an application to the coach or medical staff as soon as a player receives a shock considered too violent. It's then easy to inform the referee so that the player in question can be taken out and undergo a concussion protocol. Although Pop-Shock may not perform as well as a custom-made mouthguard, its affordability and compatibility with all head sizes make it accessible to all rugby players, contributing to safety on the field.
 
 
