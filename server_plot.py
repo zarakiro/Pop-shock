@@ -37,7 +37,7 @@ def update_plots(data):
     piezo_values = []
     for value in data_values_splited[1:]:
         if value.strip():
-            piezo_values.append(int(value.strip()))
+            piezo_values.append(float(value.strip()))
     
     if acc_value is not None:
         x_values_acc.append(len(x_values_acc))
