@@ -19,7 +19,7 @@ Pour utiliser le Pop-shock il est nécessaire d'avoir le matériel suivant:
 
 Il faut brancher les capteurs piezoelectriques sur les pins analogiques du microcontroleur. Nous avons choisi les pins A1,A2,A3,A4.
 
-Il faut brancher l'accelerometre sur les pins SLA et SDA (7 et 8).
+Il faut brancher l'accelerometre sur les pins SDA et SCL (pins 8 et 9).
 
 Une fois les branchements faits et les capteurs positionnés dans le casque, il faut implementer le code .ino sur l'esp32C3 Beetle grâce à Arduino IDE. Attention à bien choisir le bon port et la bonne board : ESPC3 Dev Module.
 
